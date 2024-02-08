@@ -1,0 +1,20 @@
+/* eslint-disable react/prop-types */
+
+// eslint-disable-next-line no-unused-vars
+
+// eslint-disable-next-line no-unused-vars
+const Square = ({ children, isSelected, updateBoard, index }) => {
+  const className = `square ${isSelected ? "is-selected" : ""}`;
+
+  const handleClick = () => {
+    updateBoard(index);
+  };
+
+  return (
+    <div className={className} onClick={handleClick}>
+      {children}
+    </div>
+  );
+};
+
+export default Square;
